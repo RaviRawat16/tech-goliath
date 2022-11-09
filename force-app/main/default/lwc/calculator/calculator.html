@@ -1,0 +1,38 @@
+<template>
+    <lightning-card >
+        <lightning-layout title="Calculator">
+        <lightning-layout-item size = "3">add
+            <lightning-input label ="First Number"  onchange= {FirstValue}></lightning-input>
+            <lightning-input label ="Second Number"  onchange= {SecondValue}></lightning-input>
+            <c-add-inputs input-one={Input1} input-two={Input2}></c-add-inputs>
+            <lightning-button label="Add" title="Non-primary action" 
+             onclick={Click1} class="slds-var-m-left_x-small"></lightning-button> 
+        </lightning-layout-item>
+
+        <lightning-layout-item size = "3">subtract
+            <lightning-input label ="First Number"  onchange= {ThirdValue}></lightning-input>
+            <lightning-input label ="Second Number"  onchange= {FourthValue}></lightning-input>
+            <c-sub-inputs input-three={Input3} input-four={Input4}></c-sub-inputs>
+            <lightning-button label="Subtract" title="Non-primary action" 
+        onclick={Click2} class="slds-var-m-left_x-small"></lightning-button>
+        </lightning-layout-item>
+
+        <lightning-layout-item size = "3">Multiply
+            <lightning-input label ="First Number"  onchange= {FifthValue}></lightning-input>
+            <lightning-input label ="Second Number"  onchange= {SixthValue}></lightning-input>
+            <c-multiply-inputs input-five={Input5} input-six={Input6}></c-multiply-inputs>
+            <lightning-button label="Multiply" title="Non-primary action" 
+         onclick={Click3} class="slds-var-m-left_x-small"></lightning-button>
+        </lightning-layout-item>
+
+        <lightning-layout-item size = "3">Divide
+            <lightning-input label ="First Number" onchange= {SevenValue}></lightning-input>
+            <lightning-input label ="Second Number"  onchange= {EightValue}></lightning-input>
+            <c-divide-inputs input-seven={Input7} input-eight={Input8}></c-divide-inputs>
+            <lightning-button label="Divide" title="Non-primary action" 
+         onclick={Click4} class="slds-var-m-left_x-small"></lightning-button>
+        </lightning-layout-item>  
+        
+    </lightning-layout>
+    </lightning-card>    
+</template>

@@ -1,0 +1,55 @@
+<template>
+	<p>The layout items extend vertically to fill the container.</p>
+	<div class="c-container">
+		<lightning-layout vertical-align="space" multiple-rows="true" class="x-large">
+			<lightning-layout-item flexibility="auto" padding="around-small" class="custom-box">
+				<lightning-card title="SHOW ADD">
+					<lightning-button label="SHOW ADD" slot="actions" onclick={add}></lightning-button>
+					<template if:true={isShowAdd}>
+						<lightning-input label="Enter Number" onchange={one}></lightning-input>
+                        <lightning-input label="Enter Number" onchange={two}></lightning-input>
+                        <lightning-button label="Sum" onclick={added}></lightning-button>
+                        <p>Result={Result1}</p>
+					</template>
+					<p slot="footer">Card Footer</p>
+				</lightning-card>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small" class="custom-box">
+				<lightning-card title="SHOW SUB">
+					<lightning-button label="SUB" slot="actions" onclick={sub}></lightning-button>
+					<template if:true={isShowSub}>
+						<lightning-input label="Enter Number" onchange={three}></lightning-input>
+                        <lightning-input label="Enter Number" onchange={four}></lightning-input>
+                        <lightning-button label="Sub" onclick={subbed}></lightning-button>
+                        <p>Result={Result2}</p>
+					</template>
+					<p slot="footer">Card Footer</p>
+				</lightning-card>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small" class="custom-box">
+				<lightning-card title="SHOW MUL">
+					<lightning-button label="MUL" slot="actions" onclick={mul}></lightning-button>
+					<template if:true={isShowMul}>
+						<lightning-input label="Enter Number" onchange={five}></lightning-input>
+                        <lightning-input label="Enter Number" onchange={six}></lightning-input>
+                        <lightning-button label="Product" onclick={product}></lightning-button>
+                        <p>Result={Result3}</p>
+					</template>
+					<p slot="footer">Card Footer</p>
+				</lightning-card>
+			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small" class="custom-box">
+				<lightning-card title="SHOW DIV">
+					<lightning-button label="DIV" slot="actions" onclick={div}></lightning-button>
+					<template if:true={isShowDiv}>
+						<lightning-input label="Enter Number" onchange={seven}></lightning-input>
+                        <lightning-input label="Enter Number" onchange={eight}></lightning-input>
+                        <lightning-button label="Div" onclick={Divide}></lightning-button>
+                        <p>Result={Result4}</p>
+					</template>
+					<p slot="footer">Card Footer</p>
+				</lightning-card>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+</template>

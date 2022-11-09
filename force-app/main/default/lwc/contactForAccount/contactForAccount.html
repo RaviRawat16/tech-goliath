@@ -1,0 +1,37 @@
+<template>
+    <template if:true={showContact}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+        aria-describedby="modal-content-id-1"
+        class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <!-- modal header start -->
+              <header class="slds-modal__header">
+                 <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close"
+                 onclick={dialogClose}>
+                    <lightning-icon icon-name="utility:close"
+                       alternative-text="close"
+                       variant="inverse"
+                       size="small" ></lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                 </button>
+                 <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">create related contact</h2>
+              </header>
+              <!-- modal body start -->
+              <div class="slds-modal__content slds-p-around_medium" > <!--id="modal-content-id-1"-->
+                    <lightning-layout>
+                <lightning-layout-item>
+                    <lightning-record-edit-form
+                    object-api-name={objectApi}
+                    onsuccess={handleSuccess}>
+               <!-- We can use this simple version like designing of indivisual input field -->
+                <lightning-input-field field-name={LastName}></lightning-input-field>
+              <lightning-input-field field-name={AccountId} value={accId} ></lightning-input-field>
+           <lightning-button variant="brand" type="submit" name="save" label="Save"></lightning-button>
+                    </lightning-record-edit-form>
+                </lightning-layout-item>
+            </lightning-layout>
+              </div>
+        </div>
+    </section>
+    </template>
+</template>
