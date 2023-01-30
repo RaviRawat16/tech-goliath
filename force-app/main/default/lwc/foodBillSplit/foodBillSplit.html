@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Friend's Food Corner">
+        <lightning-record-edit-form
+        object-api-name={objectApi}
+        onsuccess={handleSuccess}>
+            <lightning-input-field field-name={Name}></lightning-input-field>
+            <lightning-input-field field-name={BillAmount}></lightning-input-field>
+            <lightning-input-field field-name={HeadCount}></lightning-input-field>
+            <lightning-input-field field-name={Type} onchange={openContri}></lightning-input-field>
+            <lightning-input-field field-name={IndiPortion} disabled={hideField}></lightning-input-field>
+            <lightning-button variant="brand" type="submit" name="save" label="Save"></lightning-button>
+        </lightning-record-edit-form>
+        <template if:true={show}>
+            <lightning-card title="Split Bill" icon-name="custom:custom63">
+                <div style="width: auto;">
+                        <lightning-datatable
+                            key-field="Id"
+                            data={billPerPerson}
+                            columns={column}
+                            ></lightning-datatable>
+                         </div>
+            </lightning-card>
+        </template>
+    </lightning-card>
+</template>

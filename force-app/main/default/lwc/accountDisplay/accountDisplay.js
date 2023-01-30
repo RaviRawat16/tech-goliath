@@ -13,7 +13,8 @@ export default class AccountDisplay extends LightningElement {
     UpdateSearch(){
         SearchAccount({AccName:this.searchTerm}).then(results=>{
             this.Accs=results
-        })        
+            console.log(this.Accs)
+        })       
     }
     AccountSelected(event){
         this.accountID = event.target.value

@@ -44,6 +44,7 @@ export default class calculatorselector extends LightningElement {
   }
   one(event){
     this.Number1=event.detail.value
+    console.log(this.Number1)
   }
   two(event){
     this.Number2=event.detail.value
